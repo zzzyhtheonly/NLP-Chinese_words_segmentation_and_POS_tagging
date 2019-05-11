@@ -53,11 +53,14 @@ python3 addFeature.py InputTraining.pos output.feature
 echo "Start generating features output of test data..."
 python3 addFeatureforTest.py InputTest.pos output_test.feature
 echo "Start comparing the Baseline with our outputs..."
+echo "The correctness of forward segmentation is:" >> "result.res"
 python3 SEGscore.py Baseline.seg forward.txt >> "result.res"
+echo "The correctness of backward segmentation is:" >> "result.res"
 python3 SEGscore.py Baseline.seg backward.txt >> "result.res"
+echo "The correctness of pos tagging is:" >> "result.res"
 python3 POSscore.py output.pos Baseline.pos >> "result.res"
 
-echo "Now we have done, and the result of segmentations and HMM tagging is:"
+echo "Now we have done, and the results of segmentations and HMM tagging is:"
 echo ""
 cat "result.res"
 echo ""
