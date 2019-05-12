@@ -2,7 +2,8 @@ Python source code files(can execute by python3):
 	generateInputforOne.py : transfer raw data of one file into the formed data we need	
 	generateDict.py : generate dictionary file dictionary.dic
 	generateRaw.py : transfer raw data into raw Chinese article, generate file InputRaw.txt
-	segmentation.py : forward and backward segmentation, generate file forward.txt and backward.txt
+	forward_segmentation.py : forward segmentation, generate file forward.txt
+	backward_segmentation.py : backward segmentation, generate file backward.txt
 	addFeatureforTest.py : add features for InputTest.pos, generate file output_test.feature
 	addFeature.py  : add features for InputTraining.pos, generate file output.feature
 	addPOS.py  : add POS tags for InputTest.pos, generate file output.pos
