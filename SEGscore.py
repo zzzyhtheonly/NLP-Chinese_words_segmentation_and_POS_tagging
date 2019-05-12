@@ -26,11 +26,11 @@ for w in list:
 
 P = correct*100/len(list)
 R = correct*100/len(baseline)
-F = 2*P*R*100/(P+R)
+F = 2*P*R/(P+R)
 
-print("All generating words：%d %%"%len(list))
-print("All baseline words：%d %%"%len(baseline))
-print("Correct words：%d %%"%correct)	
+print("All generating words：%d "%len(list))
+print("All baseline words：%d "%len(baseline))
+print("Correct words：%d "%correct)	
 print("Precision = %.3f %%"%P)
 print("Recall = %.3f %%"%R)
 print("F measure = %.3f %%"%F)
