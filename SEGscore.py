@@ -23,16 +23,15 @@ for w in list:
 	if w == baseline[idx]:
 		correct += 1
 	lidx += len(w)
-	
-print("Correct words：%d"%correct)
-print("All generating words：%d"%len(list))
-print("All baseline words：%d"%len(baseline))
-	
-P = correct*1.0/len(list)
-R = correct*1.0/len(baseline)
-F = 2*P*R/(P+R)
-	
-print("Precision = %.3f"%P)
-print("Recall = %.3f"%R)
-print("F measure = %.3f"%F)
+
+P = correct*100/len(list)
+R = correct*100/len(baseline)
+F = 2*P*R*100/(P+R)
+
+print("All generating words：%d %%"%len(list))
+print("All baseline words：%d %%"%len(baseline))
+print("Correct words：%d %%"%correct)	
+print("Precision = %.3f %%"%P)
+print("Recall = %.3f %%"%R)
+print("F measure = %.3f %%"%F)
 	

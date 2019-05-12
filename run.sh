@@ -23,7 +23,8 @@ then
 fi
 
 echo "Start segmentation..."
-python3 segmentation.py dictionary.dic InputRaw.txt
+python3 forward_segmentation.py dictionary.dic InputRaw.txt
+python3 backward_segmentation.py dictionary.dic InputRaw.txt
 
 if [ -f "output.pos" ]
 then
